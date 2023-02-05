@@ -16,7 +16,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: [build]
-    with:
-      ENVIRONMENT: # something here, get an input?
-    run: |
-      echo "PRINTING SECRETS**** \n REPO SECRET: ${{secrets.REPO_SECRET}} \n ENV SECRET: ${{secrets.ENV_SECRET}}"
+    steps:
+        with:
+          ENVIRONMENT: # something here, get an input?
+        run: |
+          echo "PRINTING SECRETS**** \n REPO SECRET: ${{secrets.REPO_SECRET}} \n ENV SECRET: ${{secrets.ENV_SECRET}}"
