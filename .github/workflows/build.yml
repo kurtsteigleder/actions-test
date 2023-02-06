@@ -9,7 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: ${{inputs.ENVIRONMENT }}
-    secrets: inherit
     env:
       ENV_SECRET: ${{ secrets.ENV_SECRET }}
       ENV_VAR: ${{ vars.ENV_VAR }}
