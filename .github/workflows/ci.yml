@@ -7,6 +7,6 @@ on:
   workflow_dispatch:
 jobs:
   deploy:
-    uses: kurtsteigleder/actions-test/.github/workflows/build.yml@main
+    uses: kurtsteigleder/actions-test/.github/workflows/build.yml
     with:
       ENVIRONMENT: ${{github.ref_name}}
