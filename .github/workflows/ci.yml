@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   deploy:
-    uses: ./.github/workflows/build.yml
+    uses: kurtsteigleder/actions-test/.github/workflows/build.yml
     with:
       ENVIRONMENT: main
     secrets:
