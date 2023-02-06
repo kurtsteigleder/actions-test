@@ -6,8 +6,9 @@ on:
   workflow_dispatch:
 jobs:
   deploy:
-    uses: kurtsteigleder/actions-test/.github/workflows/build.yml
-    with:
-      ENVIRONMENT: main
-    secrets:
-      ENV_SECRET: ${{secrets.ENV_SECRET}}
+    - uses: kurtsteigleder/actions-test/.github/workflows/build.yml
+    - uses: actions/checkout@v3
+      with:
+        ENVIRONMENT: main
+      secrets:
+        ENV_SECRET: ${{secrets.ENV_SECRET}}
