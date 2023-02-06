@@ -1,0 +1,26 @@
+name: build
+on:
+  workflow_call:
+    inputs:
+      ENVIRONMENT:
+        required: true
+        type: string
+      secrets:
+        ENV_SECRET:
+          required: true
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      environment: ${{inputs.ENVIRONMENT }}
+      ENV:
+        ENV_SECRET: ${{ secrets.ENV_SECRET }}
+      steps:
+        - uses: actions/checkout@v3
+        - uses: actions/setup-node@v3
+          with:
+            node-version: '14'
+        - run: npm install
+        - run: npm run build
+        - run: |
+            echo 'printing envs'
+            env

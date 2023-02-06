@@ -1,0 +1,4 @@
+{
+  "name": "Build project",
+  "description": "Builds a NextJS application and tests env secrets"
+}
