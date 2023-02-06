@@ -9,6 +9,6 @@ jobs:
   deploy:
     uses: kurtsteigleder/actions-test/.github/workflows/build.yml@main
     with:
-      ENVIRONMENT: main
+      ENVIRONMENT: ${{github.ref_name}}
     secrets:
       ENV_SECRET: ${{secrets.ENV_SECRET}}
