@@ -11,5 +11,3 @@ jobs:
       ENVIRONMENT: main
     secrets:
       ENV_SECRET: ${{secrets.ENV_SECRET}}
-    vars:
-      ENV_VAR: ${{vars.ENV_VAR}}
