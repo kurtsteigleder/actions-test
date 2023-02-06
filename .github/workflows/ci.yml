@@ -7,6 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   deploy:
-    uses: kurtsteigleder/actions-test/.github/workflows/build.yml
+    uses: kurtsteigleder/actions-test/.github/workflows/build.yml@dev
     with:
       ENVIRONMENT: ${{github.ref_name}}
+    secrets: inherit
