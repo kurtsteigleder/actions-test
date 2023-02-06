@@ -8,9 +8,9 @@ on:
     secrets:
       ENV_SECRET:
         required: true
-      vars:
-        ENV_VAR:
-          required: true
+    vars:
+      ENV_VAR:
+        required: true
 jobs:
   build:
     runs-on: ubuntu-latest
