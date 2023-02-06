@@ -11,3 +11,5 @@ jobs:
     with:
       ENVIRONMENT: ${{github.ref_name}}
     secrets: inherit
+    run: |
+    echo 'job should be done unless error occurred'
