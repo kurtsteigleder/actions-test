@@ -6,11 +6,13 @@ on:
       - dev
   workflow_dispatch:
 jobs:
-  deploy:
+  build:
     uses: ./.github/workflows/build.yml
     with:
       ENVIRONMENT: ${{github.ref_name}}
     secrets: inherit
+  deploy:
+    needs: [build]
     steps:
       - run: |
           echo 'this should only print if there was no error'
