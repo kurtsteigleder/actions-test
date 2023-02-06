@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: ${{inputs.ENVIRONMENT }}
-    ENV:
+    env:
       ENV_SECRET: ${{ secrets.ENV_SECRET }}
     steps:
       - uses: actions/checkout@v3
