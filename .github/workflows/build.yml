@@ -8,7 +8,6 @@ on:
     secrets:
       ENV_SECRET:
         required: true
-        type: string
 jobs:
   build:
     runs-on: ubuntu-latest
